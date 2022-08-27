@@ -1,0 +1,64 @@
+@import './../../styles/variables.scss';
+@import './../../styles/breakpoints.scss';
+
+h1 {
+    text-align: center;
+    font-family: $primary-font;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: $light-white;
+    margin: 1rem;
+    max-width: 37.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    @include bp-up(tablet) {
+        flex-direction: row;
+    }
+
+    .static-image {
+        min-width: 25%;
+        min-height: 12.5rem;
+        background-position: center;
+        background-size: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        cursor: pointer;
+
+        @include bp-up(tablet) {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 1rem;
+        }
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+
+        h3 {
+            cursor: pointer;
+            font-family: $secondary-font;
+        }
+
+        .author {
+            cursor: pointer;
+            color: $accent-color;
+
+            &:hover {
+                color: $accent-color-dark
+            }
+        }
+    }
+
+}

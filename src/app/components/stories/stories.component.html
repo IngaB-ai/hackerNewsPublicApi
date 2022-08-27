@@ -1,0 +1,10 @@
+<h1>Todays top news</h1>
+<div class="cards">
+    <div *ngFor="let story of stories" class="card">
+        <div class="static-image" (click)="navigateToExternalUrl(story.url)" [ngStyle]="{'background-image': 'url(https://picsum.photos/200/300)'}"></div>
+        <div class="content-wrapper">
+            <h3 (click)="navigateToExternalUrl(story.url)">{{ story.title }}</h3>
+            <p>by <span class="author" routerLink="/user/{{story.by}}"><i>{{ story.by }}</i></span> · {{ story.time | date: 'mediumDate' }} · {{ story.score }}</p>
+        </div>
+    </div>
+</div>
