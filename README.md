@@ -2,10 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
-##Instalation of npm packages
+## Instalation of npm packages
 Run npm install --save --legacy-peer-deps. Because of use of @angular-redux/store npm package
 
-##Runing hacker news user API
+## Runing hacker news user API
 Run http://localhost:4200/user/john on url
 
 ## Development server
